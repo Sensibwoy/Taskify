@@ -15,7 +15,7 @@ var DB_FILE = path.join(__dirname, 'tasks.json');
 // middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // make sure the database file exists, if not create it with an empty array
 if (!fs.existsSync(DB_FILE)) {
